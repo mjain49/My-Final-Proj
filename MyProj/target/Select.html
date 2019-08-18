@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function Redirect(){
+
+if(document.getElementById("category").value=="Admin"){
+	window.location.href="Admin.html";}
+else if(document.getElementById("category").value=="User"){
+	window.location.href="User.html";}
+else if(document.getElementById("category").value=="Merchant"){
+	window.location.href="Merchant.html";}
+else
+	alert("Please Select Something!!!!");
+}
+</script>
+</head>
+<body>
+<form name="myform">
+    <table>
+        <tr>
+            <td>
+                Select Category
+            </td>
+            <td>
+                <select id="category" name="category" required>
+                    <option value="Admin">Admin</option>
+                    <option value="Merchant">Merchant</option>
+                    <option value="User">User</option>
+                </select>
+				<input id="sbtn" type="button" onclick="Redirect()" value="Redirect"/>
+            </td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
